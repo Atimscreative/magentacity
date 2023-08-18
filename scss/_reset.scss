@@ -1,0 +1,99 @@
+// IMPORT SCSS FILES
+@import "_variables";
+@import "_mixins";
+
+/*===== VARIABLES CSS =====*/
+:root {
+  @include minMQ(768px) {
+    $biggest-font-size: 4rem; // 64
+    $h1-font-size: 2.25rem; // 36
+    $h2-font-size: 1.5rem; // 24
+    $h3-font-size: 1.25rem; // 20
+    $normal-font-size: 1rem; // 16
+    $small-font-size: 0.875rem; // 14
+    $smaller-font-size: 0.75rem; // 12
+  }
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $body-font;
+  font-size: $normal-font-size;
+  background-color: $container-color;
+  color: $text;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+section,
+div {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: $text;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+section {
+  padding: 4.5rem 0 3rem;
+  @include minMQ(768px) {
+    padding-block: 6rem 3.5rem;
+  }
+}
+
+.heading {
+  margin-bottom: 30px;
+  text-align: center;
+
+  h2 {
+    color: $title;
+    margin-bottom: 5px;
+    font-weight: 800;
+  }
+  p {
+    color: $text;
+    line-height: 1.5;
+  }
+}
+
+/*===== CONTAINER =====*/
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include maxMQ(567px) {
+    max-width: 100%;
+  }
+
+  @include minMQ(567px) {
+    max-width: 960px;
+  }
+
+  @include minMQ(1200px) {
+    max-width: 1140px;
+  }
+}

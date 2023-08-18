@@ -1,0 +1,52 @@
+// FLEXBOX
+@mixin flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+// BUTTONS
+@mixin btn {
+  padding: 16px 24px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+// BUTTON HOVER
+@mixin hover {
+  &:hover {
+    background: $accent-alt;
+  }
+}
+
+// TRANSITIONS
+@mixin transition {
+  transition: 300ms;
+}
+
+// MIN SCREEN MEDIA QUERY
+@mixin minMQ($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// MAX SCREEN MEDIA QUERY
+@mixin maxMQ($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// ANIMATION & KEYFRAMES
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin animate($animation, $duration, $timing, $count, $direction) {
+  animation: $animation $duration $timing $count $direction;
+}
