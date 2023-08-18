@@ -1353,7 +1353,7 @@ section {
   overflow: hidden;
 }
 #contact::before {
-  content: url("/img/foods.png");
+  content: url("../img/foods.png");
   display: block;
   position: absolute;
   bottom: 0;

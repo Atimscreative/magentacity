@@ -905,7 +905,7 @@
   overflow: hidden;
 
   &::before {
-    content: url("/img/foods.png");
+    content: url("../img/foods.png");
     display: block;
     position: absolute;
     bottom: 0;
