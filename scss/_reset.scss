@@ -2,7 +2,7 @@
 @import "_variables";
 @import "_mixins";
 
-/*===== VARIABLES CSS =====*/
+// ===== VARIABLES CSS =====
 :root {
   @include minMQ(768px) {
     $biggest-font-size: 4rem; // 64
